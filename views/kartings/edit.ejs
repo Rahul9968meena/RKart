@@ -1,0 +1,36 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+
+    <body>
+        <div class="border p-3 m-auto w-50">
+            <h3>Edit your products</h3>
+            <form action="/kartings/<%= karting._id %>?_method=PUT" method="post" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="karting[title]" placeholder="Title" class="form-control" required
+                        value="<%= karting.title %>">
+                    <div class="invalid-feedback">Title doesn't look good</div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="karting[description]" placeholder="Enter description" class="form-control"
+                        required><%= karting.description %> </textarea>
+                    <div class="invalid-feedback">Enter short description</div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="text" name="karting[image]" placeholder="image/url" class="form-control"
+                        value="<%= karting.image %>" required>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" name="karting[price]" placeholder="price" class="form-control"
+                        value="<%= karting.price %>" required>
+                    <div class="invalid-feedback">Price looks good</div>
+                </div>
+                <br>
+                <div class="d-grid gap-1">
+                    <button type="submit" class="btn btn-md btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
