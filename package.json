@@ -2,7 +2,7 @@
   "engines": {
     "node": "v20.15.0"
   },
-  "name": "r_commerce",
+  "name": "rkart",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
